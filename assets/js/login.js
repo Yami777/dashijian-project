@@ -53,7 +53,8 @@ $('#form_login').on('submit', function (e) {
     success: (res) => {
       // console.log(res)
       const { status, message, token } = res
-      if (status !== 0) layer.msg(message)
+      if (status !== 0) return layer.msg(message)
+      // console.log(token)
       localStorage.setItem('token', token)
       // 跳转到主页
       location.href = './index.html'
