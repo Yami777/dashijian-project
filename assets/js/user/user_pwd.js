@@ -18,7 +18,7 @@ $('.layui-form').submit(function (e) {
     success: (res) => {
       // console.log(res)
       const { status, message } = res
-      layer.val(message)
+      layer.msg(message)
       if (status !== 0) return
       $('#resetBtn').click()
       // $('.layui-form')[0].reset()
